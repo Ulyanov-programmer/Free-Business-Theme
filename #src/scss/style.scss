@@ -50,11 +50,7 @@ body {
     justify-content: center;
     flex: 1 0 auto;
 
-    background-color: rgb(212, 193, 157);
-
     &__body {
-        
-        background-color: wheat;
 
         @media (min-width: 1300px) {
             flex: 0 0 70%;

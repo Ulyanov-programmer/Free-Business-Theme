@@ -1,16 +1,15 @@
-.footer {
-    background-color: goldenrod;
+$secondBlockColor: #709dca;
+$buttonFontFamily: "Lato-Regular";
 
+.footer {
     display: flex;
     justify-content: center;
     min-height: 100px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $buttonFontFamily;
     font-size: 15px;
     line-height: 1;
     text-transform: uppercase;
-
-    
 
     @media (max-width: 768px) {
         flex: 1 0 auto;
@@ -18,28 +17,128 @@
 
     &__body {
         display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
 
-        background-color: rgb(255, 193, 36);
+        flex: 1 0 auto;
+    }
 
-        @media (min-width: 1300px) {
-            width: 80%;
-        }
-        @media (min-width: 768px) and (max-width: 1299px) {
-            // width: 700px;
-        }
-        @media (min-width: 426px) and (max-width: 768px) {
-            width: 90%;
-        }
-        @media (max-width: 425px) {
-            width: 90%;
+    &__top-footer {
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        width: 100%;
+        background: white;
+
+        margin: 80px 0px 30px 0px;
+    }
+
+    &__bottom-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: $secondBlockColor;
+
+        text-transform: none;
+        color: white;
+        
+        p {
+            font-size: 10px;
+            margin: 15px 0px 15px 0px;
         }
     }
 }
 .contacts-block {
-    &__title {
+    display: flex;
+    justify-content: center;
+
+    &__body {
+        display: flex;
     }
+
     &__list {
+        display: flex;
+
+        li {
+            padding-right: 30px;
+
+            &:last-child {
+                padding: 0px 0px 0px 0px;
+            }
+
+            a {
+                font-weight: 600;
+                font-size: 8px;
+                color: rgb(22, 22, 22);
+            }
+        }
+    }
+}
+.telephone {
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+
+    &::before {
+        content: url("../images/telephoneIcon.png") " +";
+    }
+}
+.socials {
+    &__body {
+        text-align: center;
+    }
+
+    &__item {
+        display: inline-block;
+
+        @media (min-width: 425px) and (max-width: 1099px) {
+            width: 15px;
+            height: 15px;
+        }
+
+        @media (min-width: 1100px) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .twitter {
+        @media (min-width: 425px) and (max-width: 1099px) {
+            background: url("../images/twitterSocial.png") no-repeat center center/ contain;
+        }
+
+        @media (min-width: 1100px) {
+            background: url("../images/twitterSocial3x.png") no-repeat center center/ contain;
+        }
+    }
+    .facebook {
+        @media (min-width: 425px) and (max-width: 1099px) {
+            background: url("../images/facebookSocial.png") no-repeat center center/ contain;
+        }
+
+        @media (min-width: 1100px) {
+            background: url("../images/facebook3x.png") no-repeat center center/ contain;
+        }
+    }
+    .google {
+        @media (min-width: 425px) and (max-width: 1099px) {
+            background: url("../images/googleSocial.png") no-repeat center center/ contain;
+        }
+
+        @media (min-width: 1100px) {
+            background: url("../images/googleSocial3x.png") no-repeat center center/ contain;
+        }
+    }
+    .linked-in {
+        @media (min-width: 425px) and (max-width: 1099px) {
+            background: url("../images/linkedInSocial.png") no-repeat center center/ contain;
+        }
+
+        @media (min-width: 1100px) {
+            background: url("../images/linkedInSocial3x.png") no-repeat center center/ contain;
+        }
     }
 }

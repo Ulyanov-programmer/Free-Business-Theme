@@ -116,6 +116,9 @@ $buttonFontFamily: "Lato-Regular";
     @media (min-width: 320px) and (max-width: 768px) {
         height: 50px;
     }
+    @media (max-width: 661px){
+        flex: 1 0 auto;
+    }
 
     &__body {
         display: flex;
@@ -178,7 +181,7 @@ $buttonFontFamily: "Lato-Regular";
         @extend .list;
         position: absolute;
         top: 50px;
-        right: 0;
+        right: 8px;
         background-color: rgb(240, 239, 239);
         height: max-content;
         max-width: 320px;
