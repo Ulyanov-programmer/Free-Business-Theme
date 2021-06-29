@@ -1,4 +1,4 @@
-# LeRestaurante
+# Free Business Theme
 Free Business Theme - business website made on the basis of the design layout.
 
 ## How to launch?
@@ -37,7 +37,8 @@ If you're interested, you can download a mockup of the original design.
 
 You can run the project in the browser without downloading.
 
-To do this, open this link: https://ulyanov-programmer.github.io/LeRestaurante/LeRestaurante/index (i recommend disabling external modifiers for page properties, such as *dark-reader*.)
+To do this, open this link: <br> https://ulyanov-programmer.github.io/Free-Business-Theme/Free%20Business%20Theme 
+<br> (i recommend disabling external modifiers for page properties, such as *dark-reader*.)
 
 </details>
 
