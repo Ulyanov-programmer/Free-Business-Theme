@@ -335,8 +335,8 @@ h6 {
           justify-content: center;
   min-height: 100px;
   font-family: "Lato-Regular";
-  font-size: 15px;
   line-height: 1;
+  font-size: 10px;
   text-transform: uppercase;
 }
 
@@ -372,7 +372,12 @@ h6 {
           flex-flow: column nowrap;
   width: 100%;
   background: white;
-  margin: 80px 0px 30px 0px;
+  padding: 25px 0 25px 0;
+}
+
+.footer__top-footer .contacts-block,
+.footer__top-footer .telephone {
+  margin: 0px 0px 13px 0px;
 }
 
 .footer__bottom-footer {
@@ -418,28 +423,72 @@ h6 {
 }
 
 .contacts-block__list li {
-  padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contacts-block__list li:last-child {
-  padding: 0px 0px 0px 0px;
+.contacts-block__list li .last-odd-element:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .contacts-block__list li a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
   font-weight: 600;
-  font-size: 8px;
   color: #161616;
 }
 
-.telephone {
-  display: inline-block;
-  height: 30px;
-  text-align: center;
-  font-size: 18px;
+.contacts-block__list li a:hover {
+  -webkit-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
+  color: white;
+  background-color: #ffc155;
 }
 
-.telephone::before {
-  content: url("../images/telephoneIcon.png") " +";
+.telephone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+}
+
+.telephone picture {
+  height: 10px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin-right: 6px;
+}
+
+.telephone picture img {
+  height: 13px;
+}
+
+.telephone span::before {
+  content: "+";
+}
+
+.telephone span:hover {
+  text-decoration: underline;
 }
 
 .socials__body {
@@ -448,6 +497,11 @@ h6 {
 
 .socials__item {
   display: inline-block;
+  margin: 5px;
+}
+
+.socials .facebook img {
+  width: 8px;
 }
 
 body {
@@ -512,30 +566,16 @@ body.fixed {
   bottom: 0;
 }
 
-.container {
-  width: 850px;
+@media (min-width: 425px) {
+  .socials__item img {
+    width: 13px;
+    height: 13px;
+  }
 }
 
-@media (min-width: 1100px) {
-  .socials__item {
-    width: 25px;
-    height: 25px;
-  }
-
-  .socials .twitter {
-    background: url("../images/twitterSocial3x.png") no-repeat center center/contain;
-  }
-
-  .socials .facebook {
-    background: url("../images/facebook3x.png") no-repeat center center/contain;
-  }
-
-  .socials .google {
-    background: url("../images/googleSocial3x.png") no-repeat center center/contain;
-  }
-
-  .socials .linked-in {
-    background: url("../images/linkedInSocial3x.png") no-repeat center center/contain;
+@media (min-width: 1200px) {
+  .container {
+    width: 90%;
   }
 }
 
@@ -623,6 +663,13 @@ body.fixed {
   }
 }
 
+@media (max-width: 500px) {
+  .footer__bottom-footer p {
+    width: 90%;
+    line-height: 1.5;
+  }
+}
+
 @media (max-width: 430px) {
   .header__burger {
     width: 35px;
@@ -648,26 +695,48 @@ body.fixed {
   }
 }
 
-@media (min-width: 425px) and (max-width: 1099px) {
-  .socials__item {
-    width: 15px;
-    height: 15px;
+@media (min-width: 320px) and (max-width: 900px) {
+  .footer__top-footer {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  .contacts-block__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
-  .socials .twitter {
-    background: url("../images/twitterSocial.png") no-repeat center center/contain;
+  .contacts-block__list li {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .contacts-block__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
-  .socials .facebook {
-    background: url("../images/facebookSocial.png") no-repeat center center/contain;
-  }
-
-  .socials .google {
-    background: url("../images/googleSocial.png") no-repeat center center/contain;
-  }
-
-  .socials .linked-in {
-    background: url("../images/linkedInSocial.png") no-repeat center center/contain;
+  .contacts-block__list li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 
@@ -676,5 +745,17 @@ body.fixed {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 80%;
             flex: 0 0 80%;
+  }
+}
+
+@media (min-width: 890px) and (max-width: 1199px) {
+  .container {
+    width: 850px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 890px) {
+  .container {
+    width: 90%;
   }
 }

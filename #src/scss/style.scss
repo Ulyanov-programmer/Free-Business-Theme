@@ -94,5 +94,14 @@ body {
     }
 }
 .container{
-    width: $maxWidth + px;
+    @media (min-width: 1200px) {
+        width: 90%;
+    }
+    @media (min-width: 890px) and (max-width: 1199px) {
+        width: $maxWidth + px;
+    }
+
+    @media (min-width: 320px) and (max-width: 890px) {
+        width: 90%;
+    }
 }
