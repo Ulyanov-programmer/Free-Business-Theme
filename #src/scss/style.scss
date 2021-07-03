@@ -14,6 +14,7 @@
 }
 @import "nullstyle";
 @import "fonts";
+@import "iconFonts";
 @import "header";
 @import "footer";
 
@@ -24,8 +25,8 @@ $otherFontFamily: "Lato";
 
 $maxWidth: 850;
 $backColor: #ffffff;
-$buttonColor: #ffc155;
-$firstBlockColor: #ffc155;
+$buttonColor: #ebb14d;
+$firstBlockColor: #050505;
 $secondBlockColor: #709dca;
 
 $fontColor: black;
@@ -41,9 +42,9 @@ body {
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-    &.fixed {
-        overflow: hidden;
-    }
+    // &.fixed {
+    //     overflow: hidden;
+    // }
 }
 .main {
     display: flex;
@@ -51,7 +52,6 @@ body {
     flex: 1 0 auto;
 
     &__body {
-
         @media (min-width: 1300px) {
             flex: 0 0 70%;
         }
@@ -66,15 +66,124 @@ body {
         }
     }
 }
+
+.make-request {
+    background-color: $secondBlockColor;
+    &__body {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    h1,
+    span {
+        color: white;
+    }
+    &__present-image {
+    }
+}
+.our-services {
+    &__body {
+    }
+}
+.services-block {
+    &__service {
+    }
+}
+.about-us {
+    &__body {
+    }
+
+    &__info {
+    }
+
+    &__read-more {
+    }
+}
+.choose-your-price {
+    &__body {
+    }
+
+    &__plans {
+    }
+}
+.business-plan {
+    &__name {
+
+    }
+
+    &__price {
+    }
+
+    &__get-started {
+    }
+}
+.how-it-works {
+    &__body {
+    }
+
+    &__steps {
+    }
+
+    &__get-start {
+    }
+}
+.step {
+    &__image {
+    }
+
+    &__title {
+    }
+
+    &__about {
+    }
+}
+.happy-clients {
+    &__body {
+    }
+}
+.clients {
+    &__client {
+    }
+}
+.client {
+    &__body {
+    }
+
+    &__review {
+    }
+
+    &__name {
+    }
+
+    &__profession {
+    }
+}
+.newsletter {
+    &__body {
+    }
+}
+.contacts-picture {
+    &__contacts {
+    }
+
+    &__email {
+    }
+
+    &__logo {
+    }
+}
+
 .button {
-    background-color: #f1ac11;
+    background-color: $buttonColor;
+    color: white;
     text-align: center;
     width: 83px;
     height: 17px;
-    font-family: "";
+    font-family: $buttonFontFamily;
     text-transform: uppercase;
     font-size: 8px;
-    border-radius: 0;
+    border-radius: 1px;
 }
 .button-container {
     width: max-content;
@@ -93,7 +202,7 @@ body {
         }
     }
 }
-.container{
+.container {
     @media (min-width: 1200px) {
         width: 90%;
     }
@@ -103,5 +212,76 @@ body {
 
     @media (min-width: 320px) and (max-width: 890px) {
         width: 90%;
+    }
+}
+.info-block {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    min-height: 900px;
+    padding: 90px 0px 100px 0px;
+
+    &__body {
+    }
+
+    h1,
+    h2 {
+        font-family: $hFontFamily;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        line-height: 1.5;
+        letter-spacing: -0.8px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    h2 {
+        line-height: 1.5;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    span {
+        font-size: 15px;
+    }
+}
+.form {
+    display: flex;
+    justify-content: center;
+
+    * {
+        margin: 0px 10px 0px 0px;
+        :last-child {
+            margin: 0;
+        }
+    }
+
+    i{
+        display: flex;
+        align-items: center;
+
+        &::before{
+            position: relative;
+            left: 10%;
+        }
+    }
+    input {
+        font-family: $mainFontFamily;
+        height: 30px;
+        width: 200px;
+        font-size: 10px;
+        padding: 10px 10px 10px 30px;
+        border-radius: 1px;
+    }
+    .submitButton {
+        text-transform: uppercase;
+        color: white;
+        font-family: $buttonFontFamily;
+
+        background-color: $buttonColor;
+
+        height: 30px;
+        width: 180px;
     }
 }

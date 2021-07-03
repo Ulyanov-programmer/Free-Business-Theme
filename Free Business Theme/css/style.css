@@ -126,6 +126,41 @@ h6 {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'icons';
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e900";
+}
+
+.icon-mail:before {
+  content: "\e901";
+}
+
+.icon-phone:before {
+  content: "\e902";
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,12 +469,6 @@ h6 {
           align-items: center;
 }
 
-.contacts-block__list li .last-odd-element:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
 .contacts-block__list li a {
   display: block;
   text-align: center;
@@ -516,10 +545,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body.fixed {
-  overflow: hidden;
-}
-
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,15 +557,38 @@ body.fixed {
           flex: 1 0 auto;
 }
 
+.make-request {
+  background-color: #709dca;
+}
+
+.make-request__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.make-request h1,
+.make-request span {
+  color: white;
+}
+
 .button {
-  background-color: #f1ac11;
+  background-color: #ebb14d;
+  color: white;
   text-align: center;
   width: 83px;
   height: 17px;
-  font-family: "";
+  font-family: "Lato-Regular";
   text-transform: uppercase;
   font-size: 8px;
-  border-radius: 0;
+  border-radius: 1px;
 }
 
 .button-container {
@@ -564,6 +612,90 @@ body.fixed {
 
 .button-container .button:active {
   bottom: 0;
+}
+
+.info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  min-height: 900px;
+  padding: 90px 0px 100px 0px;
+}
+
+.info-block h1,
+.info-block h2 {
+  font-family: "Gotham-Black";
+  text-transform: uppercase;
+}
+
+.info-block h1 {
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.info-block h2 {
+  line-height: 1.5;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.info-block span {
+  font-size: 15px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form * {
+  margin: 0px 10px 0px 0px;
+}
+
+.form * :last-child {
+  margin: 0;
+}
+
+.form i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form i::before {
+  position: relative;
+  left: 10%;
+}
+
+.form input {
+  font-family: "Open Sans";
+  height: 30px;
+  width: 200px;
+  font-size: 10px;
+  padding: 10px 10px 10px 30px;
+  border-radius: 1px;
+}
+
+.form .submitButton {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Lato-Regular";
+  background-color: #ebb14d;
+  height: 30px;
+  width: 180px;
 }
 
 @media (min-width: 425px) {

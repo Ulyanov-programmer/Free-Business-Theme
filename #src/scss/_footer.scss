@@ -99,12 +99,6 @@ $buttonFontFamily: "Lato-Regular";
                 flex-grow: 1;
             }
 
-            .last-odd-element {
-                &:last-child {
-                    flex-grow: 1;
-                }
-            }
-
             a {
                 display: block;
                 text-align: center;
