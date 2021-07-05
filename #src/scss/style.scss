@@ -21,7 +21,8 @@
 $mainFontFamily: "Open Sans";
 $hFontFamily: "Gotham Black bold";
 $subhFontFamily: "Open Sans";
-$buttonFontFamily: "Lato-Regular";
+$buttonFontFamily: "Lato";
+$spanFontFamily: "Lato Bold";
 $otherFontFamily: "Lato";
 
 $maxWidth: 850;
@@ -36,16 +37,24 @@ $secondaryFontColor: #7b7b7b;
 $planFontColor: #818b95;
 $planSecondFontColor: #b5bbc1;
 
+// Hides the scroll bar, but leaves the ability to scroll
+html {
+    @media (min-width: 426px) and (max-width: 768px) {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-    // &.fixed {
-    //     overflow: hidden;
-    // }
 }
 .main {
     display: flex;
@@ -96,14 +105,52 @@ body {
         }
     }
 }
+
 .our-services {
     &__body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 }
-.services-block {
-    &__service {
+.service {
+    display: flex;
+    text-align: left;
+    flex: 1 0 50%;
+    max-width: 400px;
+    position: relative;
+
+    margin: 25px 0px 25px 0px;
+
+    &__image {
+        min-width: 65px;
+        img {
+            width: auto;
+            height: 35px;
+        }
+    }
+
+    &__info {
+
+        span {
+            flex: 1 0 auto;
+            text-transform: uppercase;
+            font-family: $spanFontFamily;
+            font-weight: 700;
+            color: #394b50;
+
+            margin: 0px 0px 10px 0px;
+        }
+
+        p {
+            font-family: $otherFontFamily;
+            line-height: 1.7;
+            font-size: 10px;
+            color: #7b7b7b;
+        }
     }
 }
+
 .about-us {
     &__body {
     }
@@ -131,6 +178,7 @@ body {
     &__get-started {
     }
 }
+
 .how-it-works {
     &__body {
     }
@@ -151,6 +199,7 @@ body {
     &__about {
     }
 }
+
 .happy-clients {
     &__body {
     }
@@ -172,6 +221,7 @@ body {
     &__profession {
     }
 }
+
 .newsletter {
     &__body {
     }
@@ -219,7 +269,7 @@ body {
     @media (min-width: 1300px) {
         width: 90%;
     }
-    @media (min-width: 890px) and (max-width: 1199px) {
+    @media (min-width: 890px) and (max-width: 1299px) {
         width: $maxWidth + px;
     }
 
@@ -278,7 +328,6 @@ body {
         line-height: 1.2;
         display: inline-block;
         font-family: $subhFontFamily;
-        font-weight: 200;
     }
 }
 .form {
