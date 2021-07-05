@@ -68,7 +68,7 @@ Free Business Theme - business website made on the basis of the design layout.
 	
 2. Откройте архив и найдиите папку с выходными файлами проекта (скорее всего она не будет называться #src), разархивируйте её на ваш	ПК.
 По необходимости вы можете получить макет дизайна этого сайта.
-<img src="/readmeFiles/howToLaunchBrowser/howToLaunch_browser2.png" width="auto" height="400" />
+<img src="/readmeFiles/howToLaunchBrowser/howToLaunch_browser2.png" width="1100" height="400" />
 	
 ***
 	
@@ -148,7 +148,7 @@ Free Business Theme - business website made on the basis of the design layout.
 		
   2. Open the archive and find the folder with the final files (most likely it will not be named #src), extract it to your PC.
   If you're interested, you can download a mockup of the original design.
-<img src="/readmeFiles/howToLaunchBrowser/howToLaunch_browser2.png" width="auto" height="400" />
+<img src="/readmeFiles/howToLaunchBrowser/howToLaunch_browser2.png" width="1100" height="400" />
 		
 ***
 		
