@@ -19,6 +19,7 @@ $buttonFontFamily: "Lato-Regular";
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: $maxWidth + px;
         min-height: 70px;
 
         text-transform: uppercase;
@@ -116,7 +117,7 @@ $buttonFontFamily: "Lato-Regular";
     @media (min-width: 320px) and (max-width: 768px) {
         height: 50px;
     }
-    @media (max-width: 661px){
+    @media (max-width: 661px) {
         flex: 1 0 auto;
     }
 
@@ -166,6 +167,18 @@ $buttonFontFamily: "Lato-Regular";
         @extend .list;
 
         .show-button {
+            &::after {
+                content: "";
+                margin: -2px 0 0 5px;
+
+                height: 4px;
+                width: 4px;
+                border-top: 1.5px solid black;
+                border-right: 1.5px solid black;
+                transform: rotate(135deg);
+
+                transition: all 0.3s ease 0s;
+            }
             &:hover {
                 color: #868686;
                 background: none;
@@ -173,6 +186,15 @@ $buttonFontFamily: "Lato-Regular";
             &.active {
                 color: white;
                 background-color: $buttonColor;
+
+                &::after {
+                    margin: 2px 0 0 5px;
+
+                    border-top: 1.5px solid white;
+                    border-right: 1.5px solid white;
+
+                    transform: rotate(-45deg);
+                }
             }
         }
     }
