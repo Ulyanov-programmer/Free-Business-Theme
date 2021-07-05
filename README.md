@@ -20,17 +20,20 @@ Free Business Theme - business website made on the basis of the design layout.
    <summary>VS Code</summary>
    <br>
 			
-  1. Скопируйте путь к репозиторию, **не забыв указать интересующую вас ветку**.
+  1. Скопируйте путь к репозиторию, **не забыв указать интересующую вас ветку**. 
+	  
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc1.png)
 			
    ***
 			
   2. Запустите Visual Studio Code, где, выбрав элемент Explorer, выберите **Clone repository**.
+	  
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc2.png)
 			
 ***
 			
   3. Во всплывающем окне введите ранее скопированный путь к репозиторию и выберите папку, в которой вы хотите сохранить файлы. 
+	  
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc3.png)
 			
   > *Убедитесь, что в терминале vs code указан путь **к папке проекта!***
@@ -43,6 +46,7 @@ Free Business Theme - business website made on the basis of the design layout.
    ***
 
    5. Если в процессе выполнения команды всё пойдёт по плану, вы увидите что-то вроде этого: 
+	  
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc4.png)
 			
    ***
@@ -61,12 +65,14 @@ Free Business Theme - business website made on the basis of the design layout.
 Скорее всего вы должны будете получить проект другим способом, но допустим, вам интересен именно этот вариант.
 
 1. Скачайте проект **в виде ZIP файла**. 
+	
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchBrowser/howToLaunch_browser1.png)
 
 ***
 	
 2. Откройте архив и найдиите папку с выходными файлами проекта (скорее всего она не будет называться #src), разархивируйте её на ваш	ПК.
 По необходимости вы можете получить макет дизайна этого сайта.
+	
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchBrowser/howToLaunch_browser2.png)
 	
 ***
@@ -99,17 +105,22 @@ Free Business Theme - business website made on the basis of the design layout.
  <details>
   <summary>VS Code</summary>
 
+<br>
+	 
    1. Copy the path to the repository, **not forgetting to specify the branch you are interested in**. 
+	 
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc1.png)
 		
 ***
 		
    2. Start Visual Studio Code, where by selecting the Explorer item, select **Clone repository**. 
+	 
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc2.png)
 		
 ***
 		
    3. In the pop-up window, enter the previously copied path to the repository and select the folder where you want to save the files. 
+	 
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc3.png)
 		
 ***
@@ -125,6 +136,7 @@ Free Business Theme - business website made on the basis of the design layout.
 ***
 
    5. If there are no errors in the process, you will see something like this: 
+	 
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchVSCode/howToLaunch_vsc4.png)
 		
 ***
@@ -141,12 +153,14 @@ Free Business Theme - business website made on the basis of the design layout.
 		
   Most likely, you will be given the folder with the project you are interested in in a different way, but if you are still interested in:
   1. Download the project **via ZIP**. 
+	 
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchBrowser/howToLaunch_browser1.png)
 		
 ***		
 		
   2. Open the archive and find the folder with the final files (most likely it will not be named #src), extract it to your PC.
   If you're interested, you can download a mockup of the original design.
+	 
 ![howToLaunch_vsc1](/readmeFiles/howToLaunchBrowser/howToLaunch_browser2.png)
 		
 ***
