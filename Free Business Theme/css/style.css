@@ -403,9 +403,7 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100px;
   font-family: "Lato-Regular";
-  line-height: 1;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -442,7 +440,7 @@ h6 {
           flex-flow: column nowrap;
   width: 100%;
   background: white;
-  padding: 25px 0 25px 0;
+  padding: 5px 0 25px 0;
 }
 
 .footer__top-footer .contacts-block,
@@ -472,6 +470,7 @@ h6 {
 }
 
 .contacts-block {
+  font-family: 'Lato';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,7 +736,106 @@ body {
   padding: 0px 0px 0px 0px;
   width: 120px;
   height: 30px;
-  background-color: #e7a62c;
+  background: #e7a62c;
+}
+
+.about-us a:hover {
+  color: #3d3d3d;
+}
+
+.about-us a:active {
+  background: #e9ab40;
+  color: gray;
+}
+
+.newsletter .container {
+  border-bottom: 1px solid #e3e7ec;
+  padding: 0px 0px 50px 0px;
+}
+
+.newsletter__body {
+  background: url("/images/worldBGD.jpg") no-repeat center/contain;
+  width: 850px;
+  height: 350px;
+}
+
+.newsletter form input,
+.newsletter form .form .submit-button,
+.form .newsletter form .submit-button {
+  -webkit-box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.contacts-picture {
+  position: relative;
+  background: url("/images/adressBGD.svg") no-repeat center/cover;
+  top: 15px;
+  width: 220px;
+  height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-picture__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  color: white;
+  font-family: "Lato Bold";
+}
+
+.contacts-picture__contacts h4 {
+  padding: 0px 0px 10px 0px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: "Lato Bold";
+}
+
+.contacts-picture__contacts span {
+  letter-spacing: 0.5px;
+  padding: 0px 0px 10px 0px;
+  font-size: 8px;
+  font-family: "Open Sans";
+  color: #aeb7ba;
+  font-weight: 200;
+}
+
+.contacts-picture__email {
+  font-size: 8px;
+  font-family: "Open Sans";
+  text-decoration: none;
+  color: #ffbb42;
+}
+
+.contacts-picture__email:hover {
+  color: wheat;
+}
+
+.contacts-picture__email:active {
+  background: none;
+}
+
+.contacts-picture__logo {
+  position: absolute;
+  top: 100%;
+  left: 43%;
+  width: 35px;
+  height: 35px;
 }
 
 .button {
@@ -797,14 +895,15 @@ body {
           align-items: center;
 }
 
-.info-block__content {
-  margin: 20px 0px 0px 0px;
+.info-block__subtitle {
+  padding: 0px 0px 20px 0px;
 }
 
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 5px 5px 30px 5px;
 }
 
 .form i {
@@ -848,6 +947,15 @@ body {
   background: #ebb14d;
 }
 
+.form .submit-button:hover {
+  color: #3d3d3d;
+}
+
+.form .submit-button:active {
+  background: #e9ab40;
+  color: gray;
+}
+
 .form .submit-button:focus {
   background: #ebb14d;
 }
@@ -865,27 +973,16 @@ a {
           align-items: center;
 }
 
-.button:hover,
-a:hover {
-  color: #3d3d3d;
-}
-
-.button:active,
-a:active {
-  background: #e9ab40;
-  color: gray;
-}
-
 h1,
 h2 {
   display: block;
   font-family: "Gotham Black bold";
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 2;
 }
 
 h1 {
-  letter-spacing: -0.8px;
+  letter-spacing: -0.3px;
   font-size: calc(13px + 12 * ((100vw - 320px) / 530));
   font-weight: 700;
 }
@@ -898,10 +995,9 @@ h2 {
 
 span {
   font-size: calc(10px + 3 * ((100vw - 320px) / 530));
-  letter-spacing: -0.8px;
-  line-height: 1.2;
+  letter-spacing: -0.4px;
   display: inline-block;
-  font-family: "Open Sans";
+  font-family: "Lato";
 }
 
 @media (min-width: 425px) {
@@ -937,15 +1033,11 @@ span {
 }
 
 @media (max-width: 900px) {
-  .info-block__content {
-    width: 70%;
-  }
-
   .form {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -1042,12 +1134,23 @@ span {
     width: 90%;
     line-height: 1.5;
   }
+
+  .newsletter__body {
+    background: url("/images/worldBGD.jpg") no-repeat center/cover;
+    height: 300px;
+  }
 }
 
 @media (max-width: 430px) {
   .header__burger {
     width: 35px;
     height: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .info-block__content {
+    width: auto;
   }
 }
 
@@ -1071,10 +1174,15 @@ span {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
+    padding: 20px;
   }
 
   .about-us__content p {
     text-shadow: 1px 1px 2px black, 0 0 1em black;
+  }
+
+  .about-us__image {
+    display: none;
   }
 
   .about-us a {
@@ -1100,6 +1208,13 @@ span {
 
   .our-services__body {
     width: 90%;
+  }
+
+  .newsletter form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
 }
 
@@ -1167,10 +1282,6 @@ span {
   html ::-webkit-scrollbar {
     width: 0px;
   }
-
-  .about-us__image {
-    display: none;
-  }
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
@@ -1191,6 +1302,12 @@ span {
   }
 }
 
+@media (min-width: 320px) and (max-width: 850px) {
+  .newsletter__body {
+    width: 100%;
+  }
+}
+
 @media (min-width: 890px) and (max-width: 1299px) {
   .container {
     width: 850px;
@@ -1200,5 +1317,11 @@ span {
 @media (min-width: 320px) and (max-width: 890px) {
   .container {
     width: 90%;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 900px) {
+  .info-block__content {
+    width: 70%;
   }
 }

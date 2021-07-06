@@ -200,6 +200,7 @@ body {
         @media (min-width: 320px) and (max-width: 768px) {
             text-shadow: 1px 1px 2px black, 0 0 0.1em black;
             flex: 1 0 100%;
+            padding: 20px;
         }
 
         * {
@@ -219,7 +220,7 @@ body {
     &__image {
         flex: 0 0 50%;
 
-        @media (min-width: 426px) and (max-width: 768px) {
+        @media (min-width: 320px) and (max-width: 768px) {
             display: none;
         }
         img {
@@ -232,7 +233,16 @@ body {
         padding: 0px 0px 0px 0px;
         width: 120px;
         height: 30px;
-        background-color: rgb(231, 166, 44);
+        
+        background: rgb(231, 166, 44);
+
+        &:hover {
+            color: rgb(61, 61, 61);
+        }
+        &:active {
+            background: #e9ab40;
+            color: gray;
+        }
 
         @media (min-width: 320px) and (max-width: 768px) {
             text-shadow: none;
@@ -303,17 +313,91 @@ body {
 }
 
 .newsletter {
+    .container {
+        border-bottom: 1px solid #e3e7ec;
+        padding: 0px 0px 50px 0px;
+    }
+
     &__body {
+        background: url("/images/worldBGD.jpg") no-repeat center/ contain;
+
+        width: $maxWidth + px;
+        height: 350px;
+
+        @media (min-width: 320px) and (max-width: $maxWidth + px) {
+            width: 100%;
+        }
+        @media (max-width: 500px) {
+            background: url("/images/worldBGD.jpg") no-repeat center/ cover;
+            height: 300px;
+        }
+    }
+    form {
+        @media (min-width: 320px) and (max-width: 900px) {
+            flex-flow: row wrap;
+        }
+        input {
+            box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.5);
+        }
     }
 }
 .contacts-picture {
+    position: relative;
+    background: url("/images/adressBGD.svg") no-repeat center/ cover;
+
+    top: 15px;
+    width: 220px;
+    height: 230px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
     &__contacts {
+        display: flex;
+        flex-flow: column nowrap;
+
+        color: white;
+        font-family: $spanFontFamily;
+
+        h4 {
+            padding: 0px 0px 10px 0px;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-family: $spanFontFamily;
+        }
+        span {
+            letter-spacing: 0.5px;
+            padding: 0px 0px 10px 0px;
+            font-size: 8px;
+            font-family: "Open Sans";
+            color: #aeb7ba;
+            font-weight: 200;
+        }
     }
 
     &__email {
+        font-size: 8px;
+        font-family: "Open Sans";
+
+        text-decoration: none;
+        color: #ffbb42;
+
+        &:hover {
+            color: wheat;
+        }
+        &:active {
+            background: none;
+        }
     }
 
     &__logo {
+        position: absolute;
+        top: 100%;
+        left: 43%;
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -376,15 +460,20 @@ body {
         align-items: center;
     }
     &__content {
-        margin: 20px 0px 0px 0px;
-
-        @media (max-width: 900px) {
+        @media (min-width: 425px) and (max-width: 900px) {
             width: 70%;
         }
+        @media (max-width: 425px) {
+            width: auto;
+        }
+    }
+    &__subtitle {
+        padding: 0px 0px 20px 0px;
     }
 }
 .form {
     display: flex;
+    margin: 5px 5px 30px 5px;
 
     @media (min-width: 500px) and (max-width: 900px) {
         flex-flow: column nowrap;
@@ -396,7 +485,7 @@ body {
         }
     }
     @media (max-width: 900px) {
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         justify-content: space-evenly;
 
         input,
@@ -448,7 +537,14 @@ body {
         font-family: $buttonFontFamily;
 
         background: $buttonColor;
-
+        
+        &:hover {
+            color: rgb(61, 61, 61);
+        }
+        &:active {
+            background: #e9ab40;
+            color: gray;
+        }
         &:focus {
             background: $buttonColor;
         }
@@ -460,25 +556,17 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &:hover {
-        color: rgb(61, 61, 61);
-    }
-    &:active {
-        background: #e9ab40;
-        color: gray;
-    }
 }
 h1,
 h2 {
     display: block;
     font-family: $hFontFamily;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 2;
 }
 
 h1 {
-    letter-spacing: -0.8px;
+    letter-spacing: -0.3px;
     @include adaptiv-font(25, 13);
     font-weight: 700;
 }
@@ -489,8 +577,7 @@ h2 {
 }
 span {
     @include adaptiv-font(13, 10);
-    letter-spacing: -0.8px;
-    line-height: 1.2;
+    letter-spacing: -0.4px;
     display: inline-block;
-    font-family: $subhFontFamily;
+    font-family: "Lato";
 }

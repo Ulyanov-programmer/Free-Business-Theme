@@ -5,10 +5,8 @@ $buttonFontFamily: "Lato-Regular";
 .footer {
     display: flex;
     justify-content: center;
-    min-height: 100px;
 
     font-family: $buttonFontFamily;
-    line-height: 1;
 
     font-size: 10px;
     text-transform: uppercase;
@@ -33,7 +31,7 @@ $buttonFontFamily: "Lato-Regular";
         width: 100%;
         background: white;
 
-        padding: 25px 0 25px 0;
+        padding: 5px 0 25px 0;
 
         .contacts-block,
         .telephone {
@@ -67,6 +65,7 @@ $buttonFontFamily: "Lato-Regular";
     }
 }
 .contacts-block {
+    font-family: 'Lato';
     display: flex;
     justify-content: center;
 

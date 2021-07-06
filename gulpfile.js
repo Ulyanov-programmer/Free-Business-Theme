@@ -17,14 +17,14 @@ let paths = {
         html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
         css: `${sourceFolder}/scss/style.scss`,
         scripts: `${sourceFolder}/scripts/script.js`,
-        images: `${sourceFolder}/images/**/*.{jpg, png, svg, gif, ico, webp}`,
+        images: `${sourceFolder}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
         fonts: `${sourceFolder}/fonts/*.ttf`,
     },
     watch: {
         html: `${sourceFolder}/**/*.html`,
         css: `${sourceFolder}/scss/**/*.scss`,
         scripts: `${sourceFolder}/scripts/**/*.js`,
-        images: `${sourceFolder}/images/**/*.{jpg, png, svg, gif, ico, webp}`,
+        images: `${sourceFolder}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
     },
     clean: `./${projectFolder}/`,
 }
