@@ -242,25 +242,122 @@ body {
 }
 
 .choose-your-price {
-    &__body {
-    }
+    background: #e7edf3;
 
-    &__plans {
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 320px) and (max-width: 600px) {
+            flex-flow: column nowrap;
+            width: 90%;
+        }
     }
 }
 .business-plan {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 90%;
+    padding: 30px 50px 30px 50px;
+    width: 270px;
+
+    background: white;
+
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 10px;
+
+    transition: all 0.1s ease 0s;
+
+    @media (min-width: 320px) and (max-width: $maxWidth + px) {
+        width: 100%;
+    }
+    @media (min-width: 320px) and (max-width: 600px) {
+        width: 100%;
+        border-bottom: 1px solid rgb(179, 179, 179);
+
+        &:last-child{
+            border: none;
+        }
+    }
+
+    &:hover {
+        background: #709dca;
+        height: 100%;
+
+        *,
+        ::after,
+        ::before {
+            color: white;
+        }
+    }
+
+    * {
+        padding: 10px 10px 10px 10px;
+    }
+
     &__name {
+        color: #818b95;
+        height: 2rem;
     }
 
     &__price {
+        font-size: 40px;
+        font-weight: 600;
+        color: #ffbb42;
+
+        &::before {
+            position: relative;
+            bottom: 30%;
+            font-size: 20px;
+            content: ("$");
+        }
+        &::after {
+            display: block;
+
+            font-weight: 400;
+            font-size: 10px;
+            color: #b5bbc1;
+
+            content: ("per month");
+        }
+    }
+    ul {
+        li {
+            border-top: 1px solid #b5bbc1;
+            padding: 10px 0px 10px 0px;
+            max-height: 35px;
+
+            color: #b5bbc1;
+
+            &:hover {
+                cursor: default;
+            }
+        }
     }
 
     &__get-started {
+        background: #ffbb42;
+        width: max-content;
+        padding: 10px 0px 10px 0px;
+        margin: 10px 0px 0px 0px;
+
+        font-size: 8px;
+
+        &:hover {
+            filter: brightness(90%);
+            color: black;
+        }
     }
 }
 
 .how-it-works {
     &__body {
+        display: flex;
     }
 
     &__steps {
@@ -483,6 +580,7 @@ body {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        justify-content: center;
     }
     &__content {
         @media (min-width: 425px) and (max-width: 900px) {

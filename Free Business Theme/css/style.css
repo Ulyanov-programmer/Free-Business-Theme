@@ -181,6 +181,7 @@ h6 {
 .button:hover {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
+  color: black;
   -webkit-transition: all 0.15s ease 0s;
   -o-transition: all 0.15s ease 0s;
   transition: all 0.15s ease 0s;
@@ -883,6 +884,122 @@ body {
   color: black;
 }
 
+.choose-your-price {
+  background: #e7edf3;
+}
+
+.choose-your-price__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.business-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90%;
+  padding: 30px 50px 30px 50px;
+  width: 270px;
+  background: white;
+  font-family: Lato;
+  text-transform: uppercase;
+  font-size: 10px;
+  -webkit-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
+
+.business-plan:hover {
+  background: #709dca;
+  height: 100%;
+}
+
+.business-plan:hover *,
+.business-plan:hover ::after,
+.business-plan:hover ::before {
+  color: white;
+}
+
+.business-plan * {
+  padding: 10px 10px 10px 10px;
+}
+
+.business-plan__name {
+  color: #818b95;
+  height: 2rem;
+}
+
+.business-plan__price {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffbb42;
+}
+
+.business-plan__price::before {
+  position: relative;
+  bottom: 30%;
+  font-size: 20px;
+  content: "$";
+}
+
+.business-plan__price::after {
+  display: block;
+  font-weight: 400;
+  font-size: 10px;
+  color: #b5bbc1;
+  content: "per month";
+}
+
+.business-plan ul li {
+  border-top: 1px solid #b5bbc1;
+  padding: 10px 0px 10px 0px;
+  max-height: 35px;
+  color: #b5bbc1;
+}
+
+.business-plan ul li:hover {
+  cursor: default;
+}
+
+.business-plan__get-started {
+  background: #ffbb42;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 0px 10px 0px;
+  margin: 10px 0px 0px 0px;
+  font-size: 8px;
+}
+
+.business-plan__get-started:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  color: black;
+}
+
+.how-it-works__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .happy-clients {
   background: #ebb14d;
   color: white;
@@ -1102,6 +1219,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info-block__subtitle {
@@ -1411,7 +1531,30 @@ span {
   }
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
+  .choose-your-price__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 90%;
+  }
+
+  .business-plan {
+    width: 100%;
+    border-bottom: 1px solid #b3b3b3;
+  }
+
+  .business-plan:last-child {
+    border: none;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 850px) {
+  .business-plan {
+    width: 100%;
+  }
+
   .newsletter__body {
     width: 100%;
   }
