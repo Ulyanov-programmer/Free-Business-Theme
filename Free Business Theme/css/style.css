@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -879,6 +881,114 @@ body {
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
   color: black;
+}
+
+.happy-clients {
+  background: #ebb14d;
+  color: white;
+}
+
+.happy-clients__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 47%;
+          flex: 1 0 47%;
+  background: white;
+  padding: 30px 30px 30px 30px;
+  margin: 10px 10px 10px 10px;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.client:hover {
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.client__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.client__image {
+  padding: 0px 20px 0px 0px;
+}
+
+.client__image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.client__review {
+  position: relative;
+  text-align: left;
+  font-family: "Open Sans";
+  color: #7b7b7b;
+  font-size: 9px;
+  line-height: 1.69;
+}
+
+.client__review::before {
+  position: absolute;
+  left: -15px;
+  top: -7px;
+  font-size: 20px;
+  content: "❛❛";
+  height: 17px;
+  width: 17px;
+}
+
+.client__review::after {
+  display: inline-block;
+  font-size: 20px;
+  content: "❛❛";
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.client__about-author {
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+}
+
+.client__name,
+.client__profession {
+  font-family: "Lato";
+  color: #f6772c;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.client__name::after,
+.client__profession::after {
+  content: ",";
+}
+
+.client__profession {
+  color: #99a9ae;
 }
 
 .newsletter .container {

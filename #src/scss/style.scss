@@ -25,7 +25,6 @@ $subhFontFamily: "Open Sans";
 $buttonFontFamily: "Lato";
 $spanFontFamily: "Lato Bold";
 $otherFontFamily: "Lato";
-
 $maxWidth: 850;
 $backColor: #ffffff;
 $buttonColor: #ebb14d;
@@ -194,7 +193,6 @@ body {
 
         * {
             padding-bottom: 25px;
-            
         }
         p {
             @include adaptiv-font(10, 8);
@@ -283,24 +281,86 @@ body {
 }
 
 .happy-clients {
+    background: $buttonColor;
+    color: white;
+
     &__body {
-    }
-}
-.clients {
-    &__client {
+        display: flex;
+        flex-flow: row wrap;
     }
 }
 .client {
+    display: flex;
+    flex: 1 0 47%;
+    background: white;
+    padding: 30px 30px 30px 30px;
+    margin: 10px 10px 10px 10px;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    }
+
     &__body {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    &__image {
+        padding: 0px 20px 0px 0px;
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
     }
 
     &__review {
+        position: relative;
+
+        text-align: left;
+        font-family: "Open Sans";
+        color: #7b7b7b;
+        font-size: 9px;
+        line-height: 1.69;
+
+        &::before {
+            position: absolute;
+            left: -15px;
+            top: -7px;
+
+            font-size: 20px;
+            content: ("❛❛");
+            height: 17px;
+            width: 17px;
+        }
+        &::after {
+            display: inline-block;
+
+            font-size: 20px;
+            content: ("❛❛");
+
+            transform: rotate(180deg);
+        }
+    }
+    &__about-author {
+        text-align: left;
+        padding: 10px 0px 0px 0px;
     }
 
     &__name {
-    }
+        font-family: "Lato";
+        color: #f6772c;
+        text-transform: uppercase;
+        font-size: 10px;
 
+        &::after {
+            content: (",");
+        }
+    }
     &__profession {
+        @extend .client__name;
+        color: #99a9ae;
     }
 }
 
@@ -392,7 +452,6 @@ body {
         height: 35px;
     }
 }
-
 
 .container {
     @media (min-width: 1300px) {
