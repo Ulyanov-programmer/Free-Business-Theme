@@ -831,8 +831,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -898,9 +898,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 90%;
 }
 
 .business-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e7edf3;
+  font-family: Lato;
+  text-transform: uppercase;
+  font-size: calc(9px + 1 * ((100vw - 320px) / 530));
+  height: 450px;
+}
+
+.business-plan__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -914,30 +932,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90%;
-  padding: 30px 50px 30px 50px;
+  height: 400px;
   width: 270px;
   background: white;
-  font-family: Lato;
-  text-transform: uppercase;
-  font-size: 10px;
   -webkit-transition: all 0.1s ease 0s;
   -o-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
 }
 
-.business-plan:hover {
+.business-plan__body:hover {
   background: #709dca;
   height: 100%;
 }
 
-.business-plan:hover *,
-.business-plan:hover ::after,
-.business-plan:hover ::before {
+.business-plan__body:hover *,
+.business-plan__body:hover ::after,
+.business-plan__body:hover ::before {
   color: white;
 }
 
-.business-plan * {
+.business-plan__body * {
   padding: 10px 10px 10px 10px;
 }
 
@@ -947,7 +961,7 @@ body {
 }
 
 .business-plan__price {
-  font-size: 40px;
+  font-size: calc(40px + 0 * ((100vw - 320px) / 530));
   font-weight: 600;
   color: #ffbb42;
 }
@@ -969,8 +983,18 @@ body {
 
 .business-plan ul li {
   border-top: 1px solid #b5bbc1;
-  padding: 10px 0px 10px 0px;
-  max-height: 35px;
+  min-height: 30px;
+  max-height: 30px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #b5bbc1;
 }
 
@@ -985,7 +1009,7 @@ body {
   width: max-content;
   padding: 10px 0px 10px 0px;
   margin: 10px 0px 0px 0px;
-  font-size: 8px;
+  font-size: calc(7px + 1 * ((100vw - 320px) / 530));
 }
 
 .business-plan__get-started:hover {
@@ -1063,7 +1087,7 @@ body {
   text-align: left;
   font-family: "Open Sans";
   color: #7b7b7b;
-  font-size: 9px;
+  font-size: calc(8px + 1 * ((100vw - 320px) / 530));
   line-height: 1.69;
 }
 
@@ -1096,7 +1120,7 @@ body {
   font-family: "Lato";
   color: #f6772c;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: calc(8px + 2 * ((100vw - 320px) / 530));
 }
 
 .client__name::after,
@@ -1162,21 +1186,21 @@ body {
 .contacts-picture__contacts h4 {
   padding: 0px 0px 10px 0px;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: calc(9px + 2 * ((100vw - 320px) / 530));
   font-family: "Lato Bold";
 }
 
 .contacts-picture__contacts span {
   letter-spacing: 0.5px;
   padding: 0px 0px 10px 0px;
-  font-size: 8px;
+  font-size: calc(7px + 1 * ((100vw - 320px) / 530));
   font-family: "Open Sans";
   color: #aeb7ba;
   font-weight: 200;
 }
 
 .contacts-picture__email {
-  font-size: 8px;
+  font-size: calc(7px + 1 * ((100vw - 320px) / 530));
   font-family: "Open Sans";
   text-decoration: none;
   color: #ffbb42;
@@ -1270,6 +1294,12 @@ span {
   .info-block {
     min-height: 430px;
     padding: 70px 0px 100px 0px;
+  }
+}
+
+@media (min-width: 900px) {
+  .our-services .info-block__body {
+    padding: 100px 0px 0px 0px;
   }
 }
 
@@ -1398,32 +1428,6 @@ span {
     height: 50px;
   }
 
-  .about-us {
-    background: url("../images/about-us-img.jpg") no-repeat center/cover;
-  }
-
-  .about-us__content {
-    text-shadow: 1px 1px 2px black, 0 0 0.1em black;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
-    padding: 20px;
-  }
-
-  .about-us__content p {
-    text-shadow: 1px 1px 2px black, 0 0 1em black;
-  }
-
-  .about-us__image {
-    display: none;
-  }
-
-  .about-us a {
-    text-shadow: none;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  }
-
   .info-block {
     padding: 20px 0px 20px 0px;
     min-height: auto;
@@ -1531,7 +1535,35 @@ span {
   }
 }
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 320px) and (max-width: 700px) {
+  .about-us {
+    background: url("../images/about-us-img.jpg") no-repeat center/cover;
+  }
+
+  .about-us__content {
+    text-shadow: 1px 1px 2px black, 0 0 0.1em black;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    padding: 20px;
+  }
+
+  .about-us__content p {
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+  }
+
+  .about-us__image {
+    display: none;
+  }
+
+  .about-us a {
+    text-shadow: none;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 650px) {
   .choose-your-price__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1542,19 +1574,31 @@ span {
 
   .business-plan {
     width: 100%;
+    height: 300px;
     border-bottom: 1px solid #b3b3b3;
   }
 
   .business-plan:last-child {
     border: none;
   }
+
+  .business-plan__body {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 850px) {
+@media (min-width: 651px) and (max-width: 850px) {
   .business-plan {
     width: 100%;
   }
 
+  .business-plan__body {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 850px) {
   .newsletter__body {
     width: 100%;
   }

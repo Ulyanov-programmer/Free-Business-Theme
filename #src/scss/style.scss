@@ -105,6 +105,12 @@ body {
             width: 90%;
         }
     }
+
+    @media (min-width: 900px) {
+        .info-block__body {
+            padding: 100px 0px 0px 0px;
+        }
+    }
 }
 .service {
     display: flex;
@@ -163,10 +169,12 @@ body {
 }
 
 .about-us {
+    $toMobileWidth: 700px;
+
     background-color: $buttonColor;
     color: white;
 
-    @media (min-width: 320px) and (max-width: 768px) {
+    @media (min-width: 320px) and (max-width: $toMobileWidth) {
         background: url("../images/about-us-img.jpg") no-repeat center/ cover;
     }
 
@@ -179,13 +187,13 @@ body {
     }
     &__content {
         display: flex;
-        flex: 0 0 40%;
+        flex: 0 0 50%;
         flex-flow: column nowrap;
         text-align: left;
 
         padding: 10px 10px 10px 50px;
 
-        @media (min-width: 320px) and (max-width: 768px) {
+        @media (min-width: 320px) and (max-width: $toMobileWidth) {
             text-shadow: 1px 1px 2px black, 0 0 0.1em black;
             flex: 1 0 100%;
             padding: 20px;
@@ -199,7 +207,7 @@ body {
             line-height: 1.55;
             font-family: $subhFontFamily;
 
-            @media (min-width: 320px) and (max-width: 768px) {
+            @media (min-width: 320px) and (max-width: $toMobileWidth) {
                 text-shadow: 1px 1px 2px black, 0 0 1em black;
             }
         }
@@ -208,7 +216,7 @@ body {
     &__image {
         flex: 0 0 50%;
 
-        @media (min-width: 320px) and (max-width: 768px) {
+        @media (min-width: 320px) and (max-width: $toMobileWidth) {
             display: none;
         }
         img {
@@ -234,7 +242,7 @@ body {
             color: black;
         }
 
-        @media (min-width: 320px) and (max-width: 768px) {
+        @media (min-width: 320px) and (max-width: $toMobileWidth) {
             text-shadow: none;
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         }
@@ -248,56 +256,77 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 90%;
 
-        @media (min-width: 320px) and (max-width: 600px) {
+        @media (min-width: 320px) and (max-width: 650px) {
             flex-flow: column nowrap;
             width: 90%;
         }
     }
 }
 .business-plan {
+    $toMobileWidth: 650px;
+
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
-    height: 90%;
-    padding: 30px 50px 30px 50px;
-    width: 270px;
-
-    background: white;
+    background: #e7edf3;
 
     font-family: Lato;
     text-transform: uppercase;
-    font-size: 10px;
+    @include adaptiv-font(10, 9);
 
-    transition: all 0.1s ease 0s;
+    height: 450px;
 
-    @media (min-width: 320px) and (max-width: $maxWidth + px) {
+    @media (min-width: 651px) and (max-width: 850px) {
         width: 100%;
     }
-    @media (min-width: 320px) and (max-width: 600px) {
+    @media (min-width: 320px) and (max-width: $toMobileWidth) {
         width: 100%;
+        height: 300px;
         border-bottom: 1px solid rgb(179, 179, 179);
 
-        &:last-child{
+        &:last-child {
             border: none;
         }
     }
 
-    &:hover {
-        background: #709dca;
-        height: 100%;
+    &__body {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
 
-        *,
-        ::after,
-        ::before {
-            color: white;
+        height: 400px;
+        width: 270px;
+
+        background: white;
+
+        transition: all 0.1s ease 0s;
+
+        @media (min-width: 651px) and (max-width: 850px) {
+            width: 100%;
         }
-    }
+        @media (min-width: 320px) and (max-width: $toMobileWidth) {
+            height: 100%;
+            width: 100%;
+        }
 
-    * {
-        padding: 10px 10px 10px 10px;
+        &:hover {
+            background: #709dca;
+            height: 100%;
+
+            *,
+            ::after,
+            ::before {
+                color: white;
+            }
+        }
+
+        * {
+            padding: 10px 10px 10px 10px;
+        }
     }
 
     &__name {
@@ -306,7 +335,7 @@ body {
     }
 
     &__price {
-        font-size: 40px;
+        @include adaptiv-font(40, 40);
         font-weight: 600;
         color: #ffbb42;
 
@@ -326,11 +355,17 @@ body {
             content: ("per month");
         }
     }
+
     ul {
         li {
             border-top: 1px solid #b5bbc1;
-            padding: 10px 0px 10px 0px;
-            max-height: 35px;
+            min-height: 30px;
+            max-height: 30px;
+            padding: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             color: #b5bbc1;
 
@@ -346,7 +381,7 @@ body {
         padding: 10px 0px 10px 0px;
         margin: 10px 0px 0px 0px;
 
-        font-size: 8px;
+        @include adaptiv-font(8, 7);
 
         &:hover {
             filter: brightness(90%);
@@ -418,7 +453,7 @@ body {
         text-align: left;
         font-family: "Open Sans";
         color: #7b7b7b;
-        font-size: 9px;
+        @include adaptiv-font(9, 8);
         line-height: 1.69;
 
         &::before {
@@ -449,7 +484,7 @@ body {
         font-family: "Lato";
         color: #f6772c;
         text-transform: uppercase;
-        font-size: 10px;
+        @include adaptiv-font(10, 8);
 
         &::after {
             content: (",");
@@ -513,13 +548,13 @@ body {
         h4 {
             padding: 0px 0px 10px 0px;
             text-transform: uppercase;
-            font-size: 11px;
+            @include adaptiv-font(11, 9);
             font-family: $spanFontFamily;
         }
         span {
             letter-spacing: 0.5px;
             padding: 0px 0px 10px 0px;
-            font-size: 8px;
+            @include adaptiv-font(8, 7);
             font-family: "Open Sans";
             color: #aeb7ba;
             font-weight: 200;
@@ -527,7 +562,7 @@ body {
     }
 
     &__email {
-        font-size: 8px;
+        @include adaptiv-font(8, 7);
         font-family: "Open Sans";
 
         text-decoration: none;
