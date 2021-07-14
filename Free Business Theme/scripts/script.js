@@ -57,8 +57,8 @@ function showOrHideSubmenu(e) {
 const activateSubmenuButton = document.getElementById('activate-submenu-button');
 activateSubmenuButton.addEventListener('click', showOrHideSubmenu);
 
-function scrollToElement(event) {
-    let scrollData = event.target;
+function scrollToElement(eventData) {
+    let scrollData = eventData.target;
 
     let scrollElement = document.querySelector(`.${scrollData.dataset.scrollTo}`);
 

@@ -794,7 +794,7 @@ body {
 .service__info p {
   font-family: "Lato";
   line-height: 1.7;
-  font-size: calc(12px + -2 * ((100vw - 320px) / 530));
+  font-size: calc(12px + 0 * ((100vw - 320px) / 530));
   color: #7b7b7b;
 }
 

@@ -162,7 +162,7 @@ body {
         p {
             font-family: $otherFontFamily;
             line-height: 1.7;
-            @include adaptiv-font(10, 12);
+            @include adaptiv-font(12, 12);
             color: #7b7b7b;
         }
     }
