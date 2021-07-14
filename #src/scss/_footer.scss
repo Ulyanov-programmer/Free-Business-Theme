@@ -90,27 +90,22 @@ $buttonFontFamily: "Lato-Regular";
             justify-content: center;
             align-items: center;
 
+            padding: 15px;
+            font-weight: 600;
+            color: rgb(22, 22, 22);
+
+            &:hover {
+                transition: all 0.15s ease 0s;
+                color: white;
+                background-color: $buttonColor;
+            }
+
             @media (min-width: 500px) and (max-width: 900px) {
                 flex-grow: 1;
             }
             @media (min-width: 320px) and (max-width: 500px) {
                 flex: 0 0 50%;
                 flex-grow: 1;
-            }
-
-            a {
-                display: block;
-                text-align: center;
-                padding: 15px;
-                width: 100%;
-                font-weight: 600;
-                color: rgb(22, 22, 22);
-
-                &:hover {
-                    transition: all 0.15s ease 0s;
-                    color: white;
-                    background-color: $buttonColor;
-                }
             }
         }
     }
@@ -156,7 +151,7 @@ $buttonFontFamily: "Lato-Regular";
         @media (min-width: 320px) {
             img {
                 width: 15px;
-            height: 15px;
+                height: 15px;
             }
         }
     }

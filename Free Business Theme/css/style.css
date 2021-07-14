@@ -369,6 +369,12 @@ a {
 
 .navmenu #navmenu-position-container {
   position: relative;
+  padding: 0px 0px 0px 0px;
+}
+
+.navmenu #navmenu-position-container:hover {
+  background: none;
+  color: #868686;
 }
 
 .navmenu .list,
@@ -389,21 +395,38 @@ a {
 .navmenu .list li,
 .navmenu .notepad-list li,
 .navmenu .navmenu__submenu li {
-  padding-right: 8px;
+  color: #868686;
+  height: 100%;
+  min-width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  -webkit-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
 }
 
-.navmenu .list li:last-child,
-.navmenu .notepad-list li:last-child,
-.navmenu .navmenu__submenu li:last-child {
-  padding: 0px 0px 0px 0px;
+.navmenu .list li:hover,
+.navmenu .notepad-list li:hover,
+.navmenu .navmenu__submenu li:hover {
+  color: white;
+  background-color: #ffc155;
 }
 
-.navmenu .list li a,
-.navmenu .notepad-list li a,
-.navmenu .navmenu__submenu li a,
-.navmenu .list li span,
-.navmenu .notepad-list li span,
-.navmenu .navmenu__submenu li span {
+.navmenu .notepad-list {
+  display: none;
+  position: relative;
+}
+
+.navmenu .notepad-list .show-button {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,33 +437,19 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  min-width: 50px;
-  padding: 10px;
-  text-decoration: none;
-  color: #868686;
-}
-
-.navmenu .list li a:hover,
-.navmenu .notepad-list li a:hover,
-.navmenu .navmenu__submenu li a:hover,
-.navmenu .list li span:hover,
-.navmenu .notepad-list li span:hover,
-.navmenu .navmenu__submenu li span:hover {
-  -webkit-transition: all 0.15s ease 0s;
-  -o-transition: all 0.15s ease 0s;
-  transition: all 0.15s ease 0s;
-  color: white;
-  background-color: #ffc155;
-}
-
-.navmenu .notepad-list {
-  display: none;
-  position: relative;
+  width: 100%;
+  padding: 0px 10px 0px 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .navmenu .notepad-list .show-button::after {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  right: -5px;
   content: "";
-  margin: -2px 0 0 5px;
   height: 4px;
   width: 4px;
   border-top: 1.5px solid black;
@@ -464,7 +473,6 @@ a {
 }
 
 .navmenu .notepad-list .show-button.active::after {
-  margin: 2px 0 0 5px;
   border-top: 1.5px solid white;
   border-right: 1.5px solid white;
   -webkit-transform: rotate(-45deg);
@@ -484,7 +492,7 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   position: absolute;
-  height: 50vh;
+  height: 30vh;
   min-width: 300px;
   top: 100%;
   right: 0;
@@ -496,7 +504,7 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  min-height: 80px;
+  max-height: 50%;
 }
 
 .navmenu .navmenu__submenu li a {
@@ -510,6 +518,7 @@ a {
 
 .logo {
   z-index: 2;
+  padding: 0px 3px 0px 0px;
 }
 
 .logo img {
@@ -622,18 +631,12 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contacts-block__list li a {
-  display: block;
-  text-align: center;
   padding: 15px;
-  width: 100%;
   font-weight: 600;
   color: #161616;
 }
 
-.contacts-block__list li a:hover {
+.contacts-block__list li:hover {
   -webkit-transition: all 0.15s ease 0s;
   -o-transition: all 0.15s ease 0s;
   transition: all 0.15s ease 0s;
@@ -1341,7 +1344,7 @@ span {
 @media (min-width: 768px) {
   .info-block {
     min-height: 430px;
-    padding: 70px 0px 100px 0px;
+    padding: 90px 0px 100px 0px;
   }
 }
 
@@ -1436,7 +1439,7 @@ span {
   }
 
   .info-block {
-    padding: 20px 0px 20px 0px;
+    padding: 100px 0px 30px 0px;
     min-height: auto;
   }
 }
@@ -1485,37 +1488,10 @@ span {
   }
 }
 
-@media (min-width: 320px) and (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 350px) {
   .navmenu .list li,
   .navmenu .notepad-list li,
   .navmenu .navmenu__submenu li {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .business-plan__name {
-    color: #464646;
-  }
-
-  .business-plan__price::after {
-    color: #525252;
-  }
-
-  .business-plan ul li {
-    color: #464646;
-  }
-
-  .business-plan__get-started {
-    color: #464646;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 350px) {
-  .navmenu .list li a,
-  .navmenu .notepad-list li a,
-  .navmenu .navmenu__submenu li a,
-  .navmenu .list li span,
-  .navmenu .notepad-list li span,
-  .navmenu .navmenu__submenu li span {
     font-size: 10px;
   }
 }
@@ -1658,6 +1634,24 @@ span {
   .business-plan__body:hover ::after,
   .business-plan__body:hover ::before {
     color: white;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+  .business-plan__name {
+    color: #464646;
+  }
+
+  .business-plan__price::after {
+    color: #525252;
+  }
+
+  .business-plan ul li {
+    color: #464646;
+  }
+
+  .business-plan__get-started {
+    color: #464646;
   }
 }
 

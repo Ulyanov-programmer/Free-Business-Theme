@@ -18,3 +18,19 @@ function showOrHideSubmenu(e) {
 }
 const activateSubmenuButton = document.getElementById('activate-submenu-button');
 activateSubmenuButton.addEventListener('click', showOrHideSubmenu);
+
+function scrollToElement(event) {
+    let scrollData = event.target;
+
+    let scrollElement = document.querySelector(`.${scrollData.dataset.scrollTo}`);
+
+    if (scrollData.dataset.scrollTo === 'about-us') {
+        scrollElement.scrollIntoView({ block: "center", behavior: "smooth" });
+    } else {
+        scrollElement.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+}
+let scrollButtons = document.querySelectorAll('[data-scroll-to]');
+for (const scrollButton of scrollButtons) {
+    scrollButton.addEventListener('click', scrollToElement);
+}
