@@ -65,7 +65,7 @@ $buttonFontFamily: "Lato-Regular";
     }
 }
 .contacts-block {
-    font-family: 'Lato';
+    font-family: "Lato";
     display: flex;
     justify-content: center;
 
@@ -124,6 +124,10 @@ $buttonFontFamily: "Lato-Regular";
 
     color: black;
 
+    &:hover {
+        text-decoration: underline;
+    }
+
     picture {
         height: 10px;
         object-fit: fill;
@@ -136,9 +140,6 @@ $buttonFontFamily: "Lato-Regular";
     span {
         &::before {
             content: "+";
-        }
-        &:hover {
-            text-decoration: underline;
         }
     }
 }

@@ -12,7 +12,7 @@ $buttonFontFamily: "Lato";
     justify-content: center;
     align-items: center;
 
-    @include adaptiv-font(9, 7);
+    @include adaptiv-font(12, 11);
     font-family: $buttonFontFamily;
 
     &__body {
@@ -28,7 +28,7 @@ $buttonFontFamily: "Lato";
             width: 80%;
         }
         @media (min-width: 320px) and (max-width: $maxWidth + 30 + px) {
-            width: 90%;
+            width: 98%;
         }
     }
 }
@@ -124,16 +124,23 @@ $buttonFontFamily: "Lato";
     &__body {
         display: flex;
         height: 100%;
+        flex: 1 0 auto;
         justify-content: center;
         align-items: center;
     }
 
     .list {
         display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
         height: 100%;
 
         li {
             padding-right: 8px;
+
+            @media (min-width: 320px) and (max-width: 426px) {
+                padding: 0px 0px 0px 0px;
+            }
 
             &:last-child {
                 padding: 0px 0px 0px 0px;
@@ -155,6 +162,10 @@ $buttonFontFamily: "Lato";
                     transition: all 0.15s ease 0s;
                     color: white;
                     background-color: $buttonColor;
+                }
+
+                @media (min-width: 320px) and (max-width: 350px) {
+                    font-size: 10px;
                 }
             }
         }
