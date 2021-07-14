@@ -150,16 +150,14 @@ $buttonFontFamily: "Lato-Regular";
 
     &__item {
         display: inline-block;
+        height: 13px;
         margin: 5px;
 
-        @media (min-width: 425px) {
+        @media (min-width: 320px) {
             img {
-                width: 13px;
-                height: 13px;
+                width: 15px;
+            height: 15px;
             }
         }
-    }
-    .facebook img {
-        width: 8px;
     }
 }

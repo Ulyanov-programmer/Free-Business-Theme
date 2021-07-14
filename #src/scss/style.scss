@@ -287,7 +287,7 @@ body {
     text-transform: uppercase;
     @include adaptiv-font(10, 12);
 
-    height: 450px;
+    height: 360px;
 
     @media (min-width: 651px) and (max-width: 850px) {
         width: 100%;
@@ -308,7 +308,7 @@ body {
         justify-content: center;
         align-items: center;
 
-        height: 400px;
+        height: 330px;
         width: 270px;
 
         background: white;
@@ -401,11 +401,12 @@ body {
 
     &__get-started {
         background: #ffbb42;
-        width: max-content;
+        min-width: 100px;
+        height: 30px;
         padding: 10px 0px 10px 0px;
         margin: 10px 0px 0px 0px;
 
-        @include adaptiv-font(8, 11);
+        @include adaptiv-font(11, 11);
 
         &:hover {
             filter: brightness(90%);
@@ -434,7 +435,7 @@ body {
         flex-flow: row wrap;
         justify-content: center;
 
-        margin: 70px 0px 70px 0px;
+        margin: 50px 0px 20px 0px;
 
         @media (min-width: 320px) and (max-width: 768px) {
             margin: 10px 0px 0px 10px;
@@ -638,6 +639,7 @@ body {
     &__contacts {
         display: flex;
         flex-flow: column nowrap;
+        width: 85%;
 
         color: white;
         font-family: $spanFontFamily;
@@ -737,12 +739,12 @@ h2 {
 
 h1 {
     letter-spacing: -0.3px;
-    @include adaptiv-font(25, 15);
+    @include adaptiv-font(20, 15);
     font-weight: 700;
 }
 h2 {
     line-height: 1.5;
-    @include adaptiv-font(20, 15);
+    @include adaptiv-font(17, 15);
     font-weight: 500;
 }
 span {
