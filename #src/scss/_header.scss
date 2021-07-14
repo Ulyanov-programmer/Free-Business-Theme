@@ -117,7 +117,7 @@ $buttonFontFamily: "Lato";
     @media (min-width: 320px) and (max-width: 768px) {
         height: 50px;
     }
-    @media (max-width: 661px) {
+    @media (max-width: 765px) {
         flex: 1 0 auto;
     }
 
@@ -127,6 +127,9 @@ $buttonFontFamily: "Lato";
         flex: 1 0 auto;
         justify-content: center;
         align-items: center;
+    }
+    #navmenu-position-container {
+        position: relative;
     }
 
     .list {
@@ -172,10 +175,10 @@ $buttonFontFamily: "Lato";
     }
 
     .notepad-list {
+        @extend .list;
+
         display: none;
         position: relative;
-
-        @extend .list;
 
         .show-button {
             &::after {
@@ -212,13 +215,15 @@ $buttonFontFamily: "Lato";
 
     .navmenu__submenu {
         @extend .list;
+
         position: absolute;
-        top: 50px;
-        right: 8px;
+        top: 100%;
+        right: 0;
+
         background-color: rgb(240, 239, 239);
+
         height: max-content;
         max-width: 320px;
-
         padding: 10px;
 
         li {
@@ -235,7 +240,7 @@ $buttonFontFamily: "Lato";
         }
     }
 
-    @media (max-width: 661px) {
+    @media (max-width: 765px) {
         .list {
             display: none;
         }

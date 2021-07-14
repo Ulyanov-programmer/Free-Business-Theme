@@ -409,6 +409,10 @@ a {
           align-items: center;
 }
 
+.navmenu #navmenu-position-container {
+  position: relative;
+}
+
 .navmenu .list,
 .navmenu .notepad-list,
 .navmenu .navmenu__submenu {
@@ -506,8 +510,8 @@ a {
 
 .navmenu .navmenu__submenu {
   position: absolute;
-  top: 50px;
-  right: 8px;
+  top: 100%;
+  right: 0;
   background-color: #f0efef;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -1392,7 +1396,7 @@ span {
   }
 }
 
-@media (max-width: 661px) {
+@media (max-width: 765px) {
   .navmenu {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
