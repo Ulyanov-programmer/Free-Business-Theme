@@ -596,7 +596,7 @@ a {
 }
 
 .footer__bottom-footer p {
-  font-size: 10px;
+  font-size: calc(10px + 1 * ((100vw - 320px) / 530));
   margin: 15px 0px 15px 0px;
 }
 
@@ -1172,7 +1172,7 @@ body {
   font-family: "Lato";
   color: #f6772c;
   text-transform: uppercase;
-  font-size: calc(12px + -2 * ((100vw - 320px) / 530));
+  font-size: calc(10px + 1 * ((100vw - 320px) / 530));
 }
 
 .client__name::after,
@@ -1253,7 +1253,7 @@ body {
 }
 
 .contacts-picture__email {
-  font-size: calc(11px + -2 * ((100vw - 320px) / 530));
+  font-size: calc(10px + 1 * ((100vw - 320px) / 530));
   font-family: "Open Sans";
   text-decoration: none;
   color: #ffbb42;

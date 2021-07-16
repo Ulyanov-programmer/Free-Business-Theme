@@ -590,7 +590,7 @@ body {
         font-family: "Lato";
         color: #f6772c;
         text-transform: uppercase;
-        @include adaptiv-font(10, 12);
+        @include adaptiv-font(11, 10);
 
         &::after {
             content: (",");
@@ -669,7 +669,7 @@ body {
     }
 
     &__email {
-        @include adaptiv-font(9, 11);
+        @include adaptiv-font(11, 10);
         font-family: "Open Sans";
 
         text-decoration: none;

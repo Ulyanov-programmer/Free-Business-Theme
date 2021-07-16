@@ -54,7 +54,7 @@ $buttonFontFamily: "Lato-Regular";
         color: white;
 
         p {
-            font-size: 10px;
+            @include adaptiv-font(11, 10);
             margin: 15px 0px 15px 0px;
 
             @media (max-width: 500px) {
