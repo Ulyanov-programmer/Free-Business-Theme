@@ -1146,17 +1146,17 @@ body {
   position: absolute;
   left: -15px;
   top: -9px;
-  font-size: calc(15px + 5 * ((100vw - 320px) / 530));
+  font-size: 18px;
   content: "❛❛";
   height: 17px;
 }
 
 .client__review::after {
-  position: relative;
-  bottom: -10%;
-  height: 17px;
-  font-size: calc(15px + 5 * ((100vw - 320px) / 530));
-  content: "❛❛";
+  position: absolute;
+  bottom: -10px;
+  right: -9px;
+  font-size: 18px;
+  content: " ❛❛";
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
