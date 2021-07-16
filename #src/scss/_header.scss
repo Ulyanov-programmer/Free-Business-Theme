@@ -86,7 +86,8 @@ $buttonFontFamily: "Lato";
             align-items: center;
 
             padding: 10px;
-
+            
+            cursor: pointer;
             transition: all 0.15s ease 0s;
 
             &:hover {

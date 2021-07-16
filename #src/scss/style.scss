@@ -285,7 +285,7 @@ body {
 
     font-family: Lato;
     text-transform: uppercase;
-    @include adaptiv-font(10, 12);
+    @include adaptiv-font(11, 12);
 
     height: 360px;
 
@@ -382,6 +382,7 @@ body {
             min-height: 30px;
             max-height: 30px;
             padding: 0;
+            @include adaptiv-font(11, 12);
 
             display: flex;
             justify-content: center;
@@ -551,7 +552,7 @@ body {
         text-align: left;
         font-family: "Open Sans";
         color: #7b7b7b;
-        @include adaptiv-font(10, 11);
+        @include adaptiv-font(11, 10);
         line-height: 1.69;
 
         &::before {
@@ -559,18 +560,23 @@ body {
             left: -15px;
             top: -9px;
 
-            font-size: 20px;
+            @include adaptiv-font(20, 15);
             content: ("❛❛");
             height: 17px;
-            width: 17px;
         }
         &::after {
-            display: inline-block;
-
-            font-size: 20px;
+            position: relative;
+            bottom: -10%;
+            height: 17px;
+            
+            @include adaptiv-font(20, 15);
             content: ("❛❛");
 
             transform: rotate(180deg);
+
+            @media (min-width: 320px) and (max-width: 426px) {
+                bottom: -6%;
+            }
         }
     }
     &__about-author {
@@ -653,7 +659,7 @@ body {
         span {
             letter-spacing: 0.5px;
             padding: 0px 0px 10px 0px;
-            @include adaptiv-font(9, 11);
+            @include adaptiv-font(11, 11);
             font-family: "Open Sans";
             color: #aeb7ba;
             font-weight: 200;

@@ -122,7 +122,7 @@ h6 {
 .form .submit-button {
   height: 35px;
   width: 210px;
-  font-size: 10px;
+  font-size: calc(10px + 1 * ((100vw - 320px) / 530));
   font-family: "Open Sans";
   padding: 10px 10px 10px 30px;
   margin: 8px 0px 8px 6px;
@@ -170,7 +170,7 @@ h6 {
   color: white;
   font-family: "Lato";
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: calc(10px + -1 * ((100vw - 320px) / 530));
   min-width: 80px;
   height: 7px;
   padding: 5px 5px 5px 5px;
@@ -408,6 +408,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+  cursor: pointer;
   -webkit-transition: all 0.15s ease 0s;
   -o-transition: all 0.15s ease 0s;
   transition: all 0.15s ease 0s;
@@ -632,6 +633,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
+  cursor: pointer;
   font-weight: 600;
   color: #161616;
 }
@@ -906,7 +908,7 @@ body {
   background: #e7edf3;
   font-family: Lato;
   text-transform: uppercase;
-  font-size: calc(12px + -2 * ((100vw - 320px) / 530));
+  font-size: calc(12px + -1 * ((100vw - 320px) / 530));
   height: 360px;
 }
 
@@ -967,6 +969,7 @@ body {
   min-height: 30px;
   max-height: 30px;
   padding: 0;
+  font-size: calc(12px + -1 * ((100vw - 320px) / 530));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,7 +1138,7 @@ body {
   text-align: left;
   font-family: "Open Sans";
   color: #7b7b7b;
-  font-size: calc(11px + -1 * ((100vw - 320px) / 530));
+  font-size: calc(10px + 1 * ((100vw - 320px) / 530));
   line-height: 1.69;
 }
 
@@ -1143,15 +1146,16 @@ body {
   position: absolute;
   left: -15px;
   top: -9px;
-  font-size: 20px;
+  font-size: calc(15px + 5 * ((100vw - 320px) / 530));
   content: "❛❛";
   height: 17px;
-  width: 17px;
 }
 
 .client__review::after {
-  display: inline-block;
-  font-size: 20px;
+  position: relative;
+  bottom: -10%;
+  height: 17px;
+  font-size: calc(15px + 5 * ((100vw - 320px) / 530));
   content: "❛❛";
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -1242,7 +1246,7 @@ body {
 .contacts-picture__contacts span {
   letter-spacing: 0.5px;
   padding: 0px 0px 10px 0px;
-  font-size: calc(11px + -2 * ((100vw - 320px) / 530));
+  font-size: calc(11px + 0 * ((100vw - 320px) / 530));
   font-family: "Open Sans";
   color: #aeb7ba;
   font-weight: 200;
@@ -1652,6 +1656,10 @@ span {
 
   .business-plan__get-started {
     color: #464646;
+  }
+
+  .client__review::after {
+    bottom: -6%;
   }
 }
 

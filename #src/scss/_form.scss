@@ -1,3 +1,10 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+$maxWidth: 850;
 $mainFontFamily: "Open Sans";
 $buttonFontFamily: "Lato";
 $buttonColor: #ebb14d;
@@ -33,7 +40,7 @@ $buttonColor: #ebb14d;
         height: 35px;
         width: 210px;
 
-        font-size: 10px;
+        @include adaptiv-font(11, 10);
         font-family: $mainFontFamily;
 
         padding: 10px 10px 10px 30px;
@@ -72,7 +79,7 @@ $buttonColor: #ebb14d;
     color: white;
     font-family: $buttonFontFamily;
     text-transform: uppercase;
-    font-size: 8px;
+    @include adaptiv-font(9, 10);
 
     min-width: 80px;
     height: 7px;
@@ -84,7 +91,7 @@ $buttonColor: #ebb14d;
     &:hover {
         filter: brightness(90%);
         color: black;
-        
+
         transition: all 0.15s ease 0s;
     }
 }
@@ -94,7 +101,6 @@ a {
     align-items: center;
 }
 .button-container {
-    //TODO: Проверить.
     width: max-content;
     background-color: lighten($buttonColor, 90%);
 
