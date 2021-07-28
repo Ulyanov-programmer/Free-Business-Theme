@@ -1364,6 +1364,19 @@ span {
   }
 }
 
+@media (min-width: 426px) {
+  .business-plan__body:hover {
+    background: #709dca;
+    height: 100%;
+  }
+
+  .business-plan__body:hover *,
+  .business-plan__body:hover ::after,
+  .business-plan__body:hover ::before {
+    color: white;
+  }
+}
+
 @media (min-width: 768px) {
   .info-block {
     min-height: 430px;
@@ -1647,19 +1660,6 @@ span {
 
   .business-plan__body {
     width: 100%;
-  }
-}
-
-@media (min-width: 426px) and (max-width: 1299px) {
-  .business-plan__body:hover {
-    background: #709dca;
-    height: 100%;
-  }
-
-  .business-plan__body:hover *,
-  .business-plan__body:hover ::after,
-  .business-plan__body:hover ::before {
-    color: white;
   }
 }
 
