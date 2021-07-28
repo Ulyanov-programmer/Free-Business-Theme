@@ -24,11 +24,7 @@ function scrollToElement(eventData) {
 
     let scrollElement = document.querySelector(`.${scrollData.dataset.scrollTo}`);
 
-    if (scrollData.dataset.scrollTo === 'about-us') {
-        scrollElement.scrollIntoView({ block: "center", behavior: "smooth" });
-    } else {
-        scrollElement.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+    scrollElement.scrollIntoView({ block: "start", behavior: "smooth" });
 }
 let scrollButtons = document.querySelectorAll('[data-scroll-to]');
 for (const scrollButton of scrollButtons) {

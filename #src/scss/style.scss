@@ -48,24 +48,24 @@ body {
     flex: 1 0 auto;
 
     &__body {
-        // @media (min-width: 1300px) {
-        //     flex: 0 0 70%;
-        // }
-        // @media (min-width: 768px) and (max-width: 1299px) {
-        //     // flex: 0 0 700px;
-        // }
-        // @media (min-width: 426px) and (max-width: 768px) {
-        //     flex: 0 0 80%;
-        // }
-        // @media (max-width: 425px) {
-        //     width: 90%;
-        // }
     }
 }
 
 .make-request {
     position: relative;
     background-color: $secondBlockColor;
+
+    &.info-block{
+        padding: 70px 0px 0px 0px;
+
+        @media (min-width: 426px) and (max-width: $maxWidth + px){
+            padding: 10px 0px 0px 0px;
+        }
+            
+    }
+    .info-block__body{
+        justify-content: start;
+    }
 
     &__body {
         position: relative;
@@ -108,7 +108,7 @@ body {
 
     @media (min-width: 900px) {
         .info-block__body {
-            padding: 100px 0px 0px 0px;
+            padding: 80px 0px 0px 0px;
         }
     }
 }
@@ -198,7 +198,7 @@ body {
             text-shadow: 0px 0px 5px black, 0 0 0.1em black;
 
             flex: 1 0 100%;
-            padding: 20px;
+            padding: 80px 20px 10px 20px;
         }
 
         * {
@@ -711,10 +711,10 @@ body {
 
     @media (min-width: 768px) {
         min-height: 430px;
-        padding: 90px 0px 100px 0px;
+        padding: 65px 0px 80px 0px;
     }
     @media (min-width: 320px) and (max-width: 768px) {
-        padding: 100px 0px 30px 0px;
+        padding: 75px 0px 10px 0px;
         min-height: auto;
     }
 
