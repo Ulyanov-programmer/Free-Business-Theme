@@ -174,5 +174,5 @@ If you have any questions or suggestions, write to me by email <a href="mailto:c
 
 </details>
 
-[этот сайт на GitHub Pages]: https://ulyanov-programmer.github.io/Free-Business-Theme/Free%20Business%20Theme
-[this site on GitHub Pages]: https://ulyanov-programmer.github.io/Free-Business-Theme/Free%20Business%20Theme
+[этот сайт на GitHub Pages]: https://ulyanov-programmer.github.io/Free-Business-Theme/Free-Business-Theme
+[this site on GitHub Pages]: https://ulyanov-programmer.github.io/Free-Business-Theme/Free-Business-Theme

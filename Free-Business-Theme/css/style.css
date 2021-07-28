@@ -1367,7 +1367,7 @@ span {
 @media (min-width: 768px) {
   .info-block {
     min-height: 430px;
-    padding: 65px 0px 80px 0px;
+    padding: 75px 0px 75px 0px;
   }
 }
 
@@ -1465,7 +1465,7 @@ span {
   }
 
   .info-block {
-    padding: 75px 0px 10px 0px;
+    padding: 75px 0px 20px 0px;
     min-height: auto;
   }
 }
@@ -1589,7 +1589,7 @@ span {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
-    padding: 80px 20px 10px 20px;
+    padding: 80px 20px 80px 20px;
   }
 
   .about-us__image {

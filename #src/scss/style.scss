@@ -198,7 +198,7 @@ body {
             text-shadow: 0px 0px 5px black, 0 0 0.1em black;
 
             flex: 1 0 100%;
-            padding: 80px 20px 10px 20px;
+            padding: 80px 20px 80px 20px;
         }
 
         * {
@@ -711,10 +711,10 @@ body {
 
     @media (min-width: 768px) {
         min-height: 430px;
-        padding: 65px 0px 80px 0px;
+        padding: 75px 0px 75px 0px;
     }
     @media (min-width: 320px) and (max-width: 768px) {
-        padding: 75px 0px 10px 0px;
+        padding: 75px 0px 20px 0px;
         min-height: auto;
     }
 
