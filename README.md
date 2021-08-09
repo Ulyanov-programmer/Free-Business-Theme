@@ -1,6 +1,12 @@
 # Free Business Theme
 Free Business Theme - business website made on the basis of the design layout.
 
+<img src="readmeFiles/preview.png" width=100% />
+
+<p align="center">
+  <img src="readmeFiles/previewMOB.png" height=400px />
+</p>
+
 <details>
  <summary>RU Описание</summary>
  
