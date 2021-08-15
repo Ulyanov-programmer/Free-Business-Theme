@@ -727,10 +727,6 @@ body {
   background-color: #709dca;
 }
 
-.make-request.info-block {
-  padding: 70px 0px 0px 0px;
-}
-
 .make-request .info-block__body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -758,7 +754,7 @@ body {
 
 .make-request__present-image {
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 20%;
   height: 250px;
   width: 500px;
@@ -1380,13 +1376,13 @@ span {
 @media (min-width: 768px) {
   .info-block {
     min-height: 430px;
-    padding: 75px 0px 75px 0px;
+    padding: 35px 0px 35px 0px;
   }
 }
 
 @media (min-width: 900px) {
   .our-services .info-block__body {
-    padding: 80px 0px 0px 0px;
+    padding: 80px 0px 55px 0px;
   }
 }
 
@@ -1478,7 +1474,7 @@ span {
   }
 
   .info-block {
-    padding: 75px 0px 20px 0px;
+    padding: 25px 0px 20px 0px;
     min-height: auto;
   }
 }
@@ -1568,12 +1564,6 @@ span {
   }
 }
 
-@media (min-width: 426px) and (max-width: 850px) {
-  .make-request.info-block {
-    padding: 10px 0px 0px 0px;
-  }
-}
-
 @media (min-width: 320px) and (max-width: 425px) {
   .service {
     -webkit-box-orient: vertical;
@@ -1602,7 +1592,7 @@ span {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
-    padding: 80px 20px 80px 20px;
+    padding: 20px 20px 20px 20px;
   }
 
   .about-us__image {

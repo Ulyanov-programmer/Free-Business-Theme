@@ -58,13 +58,19 @@ const activateSubmenuButton = document.getElementById('activate-submenu-button')
 activateSubmenuButton.addEventListener('click', showOrHideSubmenu);
 
 function scrollToElement(eventData) {
-    let scrollData = eventData.target;
+    let scrollElement = document.querySelector('.' + eventData.target.dataset.scrollTo);
 
-    let scrollElement = document.querySelector(`.${scrollData.dataset.scrollTo}`);
+    if (scrollElement !== undefined) {
+        let scrolltop = window.pageYOffset + scrollElement.getBoundingClientRect().top;
 
-    scrollElement.scrollIntoView({ block: "start", behavior: "smooth" });
+        // If you are using a fixed header, subtract its height from the scroll.
+        window.scrollTo({
+            top: scrolltop - 70,
+            behavior: "smooth"
+        });
+    }
 }
 let scrollButtons = document.querySelectorAll('[data-scroll-to]');
-for (const scrollButton of scrollButtons) {
+for (let scrollButton of scrollButtons) {
     scrollButton.addEventListener('click', scrollToElement);
 }
