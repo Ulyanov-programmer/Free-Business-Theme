@@ -11,6 +11,9 @@ $buttonFontFamily: "Lato";
     width: 100%;
     min-height: 70px;
     z-index: 10;
+    *{
+        z-index: 3;
+    }
 
     display: flex;
     justify-content: center;

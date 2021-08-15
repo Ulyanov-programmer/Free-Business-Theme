@@ -38,14 +38,11 @@ $planFontColor: #818b95;
 $planSecondFontColor: #b5bbc1;
 
 body {
-    display: flex;
-    flex-direction: column;
     height: 100%;
 }
 .main {
-    display: flex;
     justify-content: center;
-    flex: 1 0 auto;
+    min-width: 0;
 
     &__body {
     }
@@ -55,13 +52,25 @@ body {
     position: relative;
     background-color: $secondBlockColor;
 
-    .info-block__body{
-        justify-content: start;
+    &.info-block {
+        display: block;
+        @media (min-width: 900px) {
+            padding-top: 70px;
+            padding-bottom: 0px;
+        }
+
+        .info-block__body {
+            display: block;
+            justify-content: start;
+
+            .info-block__content {
+                margin: 0 auto;
+            }
+        }
     }
 
     &__body {
         position: relative;
-        display: flex;
         flex-flow: column nowrap;
         justify-content: center;
     }
@@ -70,18 +79,37 @@ body {
     span {
         color: white;
     }
-    
-    &__present-image {
-        position: absolute;
-        top: 120px;
-        left: 20%;
 
-        height: 250px;
-        width: 500px;
+    .present-slider {
+        transform: translate(0, 40px);
 
         @media (min-width: 320px) and (max-width: 900px) {
             display: none;
         }
+        .swiper-pagination {
+            position: static;
+            padding: 20px 0px 0px 0px;
+            &-bullet {
+                height: 10px;
+                width: 10px;
+                background-color: #fff;
+                border: 2px solid gray;
+                border-radius: 50%;
+                transition: all 0.2s ease;
+
+                &-active {
+                    border-color: rgb(28, 168, 221);
+                }
+                &:hover {
+                    border-color: rgb(1, 31, 112);
+                }
+            }
+        }
+    }
+
+    &__present-image {
+        height: 250px;
+        width: 500px;
     }
 }
 
@@ -562,10 +590,9 @@ body {
             position: absolute;
             bottom: -10px;
             right: -9px;
-            
+
             font-size: 18px;
             content: ("\00a0❛❛");
-            
 
             transform: rotate(180deg);
 
@@ -641,6 +668,7 @@ body {
         display: flex;
         flex-flow: column nowrap;
         width: 85%;
+        transform: translate(0px, -7%);
 
         color: white;
         font-family: $spanFontFamily;
@@ -686,6 +714,7 @@ body {
 }
 
 .container {
+    margin: 0 auto;
     @media (min-width: 1300px) {
         width: 90%;
     }
@@ -699,6 +728,7 @@ body {
 }
 .info-block {
     display: flex;
+    min-width: 0;
     justify-content: center;
     text-align: center;
 
