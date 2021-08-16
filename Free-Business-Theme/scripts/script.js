@@ -74,3 +74,22 @@ let scrollButtons = document.querySelectorAll('[data-scroll-to]');
 for (let scrollButton of scrollButtons) {
     scrollButton.addEventListener('click', scrollToElement);
 }
+
+function show_onscroll(e) {
+    const posTop = e.getBoundingClientRect().top;
+    if (posTop < window.innerHeight) {
+        e.classList.add('visible');
+    }
+}
+let nonVisibleElements = document.querySelectorAll('[data-scroll-animated]');
+nonVisibleElements.forEach(element => {
+    window.addEventListener('scroll', function () {
+        show_onscroll(element);
+    });
+});
+
+window.addEventListener('scroll', function (e) {
+
+    if (show_onscroll())
+        sms.classList.add("loud");
+});
