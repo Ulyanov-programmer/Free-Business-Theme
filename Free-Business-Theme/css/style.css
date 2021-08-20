@@ -750,6 +750,12 @@ body {
   color: white;
 }
 
+.make-request form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .make-request .present-slider {
   -webkit-transform: translate(0, 40px);
       -ms-transform: translate(0, 40px);
