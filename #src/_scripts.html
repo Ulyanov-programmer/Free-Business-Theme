@@ -5,8 +5,12 @@
 
     const swiper = new Swiper('.present-slider', {
         pagination: {
-            el: '.swiper-pagination',
+            el: '.present-slider__pagination',
             clickable: true,
+        },
+        autoplay: {
+            delay: 4000,
+            pauseOnMouseEnter: true,
         },
         loop: true,
         slidesPerView: 1,
